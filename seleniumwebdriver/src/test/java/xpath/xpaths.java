@@ -25,6 +25,11 @@ public class xpaths
 		System.out.println(value);  
 		
 		
+		
+		
+		driver.findElement(By.xpath("//p[normalize-space()='123']"));
+		
+		
     }
 
 }
