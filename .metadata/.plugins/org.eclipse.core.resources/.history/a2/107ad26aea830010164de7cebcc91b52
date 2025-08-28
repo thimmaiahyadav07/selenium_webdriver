@@ -1,0 +1,37 @@
+package day28;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CheckBoxes 
+{
+	public static void main(String[] args)
+	{
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		//1) select specific checkbox
+		//driver.findElement(By.xpath("//input[@id='sunday']")).click();
+		
+		//2)select all the check boxes
+		List<WebElement> checkboxs=driver.findElements(By.xpath("//input[@class='form-check-input' and @type='checkbox']"));
+		
+		/*for(int i=0;i<checkboxs.size();i++)
+		{
+			checkboxs.get(i).click();
+			
+		}*/
+		for(WebElement check:checkboxs)
+		{
+			check.get().click();
+			
+		}
+		
+	}
+
+}

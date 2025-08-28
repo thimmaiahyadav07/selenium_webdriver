@@ -1,0 +1,54 @@
+package day22;
+
+import org.openqa.selenium.By;
+//import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class StaticTable 
+
+{
+	public static void mains(String[] args)
+	{
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		//1)total no of rows in table
+		//Dimension rows=driver.findElement(By.xpath("//table[@name='BookTable']//tr")).getSize();
+		int rows=driver.findElements(By.tagName("tr")).size();
+		
+		System.out.println(rows);
+		//2)find total number of coluns in a table
+		int columns=driver.findElements(By.xpath("th")).size();
+		//int colums=driver.findElements(By.xpath("//table[@name='BookTable']//tr//th")).size();
+		System.out.println(columns);
+		
+		
+		//3)Read data from specific row and colums-->5th row and 1st column
+		String bookname=driver.findElement(By.xpath("//table[@name='BookTable']//tr[5]//td[1]")).getText();
+		System.out.println(bookname);
+		
+		//4)read data from all the rows and columns -->we should not pass variables in the xpath we can place in between plus symbol along with double quotes 
+		for(int r=1;r<=rows;rows++)
+		{
+			for(int c=1;c<=columns;columns++)
+			{
+				String value=driver.findElement(By.xpath("/table[@name='BookTable']//tr["+r+"]//td["+1+"]")).getText();
+				System.out.println(value);
+				
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package day47;
+
+public class LoginTest 
+{
+	@BeforeClass
+	void setup()
+	{
+		
+	}
+
+}

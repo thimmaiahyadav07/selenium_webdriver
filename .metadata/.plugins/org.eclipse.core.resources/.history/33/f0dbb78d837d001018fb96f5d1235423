@@ -1,0 +1,13 @@
+package day47;
+import org.junit.jupiter.api.BeforeAll;
+
+public class LoginTest 
+{
+	@BeforeAll
+	public static void setup()
+	{
+		
+		
+	}
+
+}

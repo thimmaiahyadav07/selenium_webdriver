@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="seleniumwebdriver.day27.OrangeHRM"/>
+      <class name="seleniumwebdriver.day27.MyListener"/>
+      <class name="seleniumwebdriver.ExtentReportManager"/>
+    </classes>
+  </test>
+</suite>

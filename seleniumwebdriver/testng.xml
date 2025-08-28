@@ -1,0 +1,23 @@
+<suite name="Automation Suite" verbose="1">
+
+    <!-- Register Listeners -->
+    <listeners>
+        <listener class-name="day27.MyListener"/>
+        <listener class-name="com.java.reports.ExtentTestListener"/>
+    </listeners>
+
+    <!-- First Test -->
+    <test name="OrangeHRM Test">
+        <classes>
+            <class name="day27.OrangeHRM"/>
+        </classes>
+    </test>
+
+    <!-- Second Test -->
+    <test name="Login Tests">
+        <classes>
+            <class name="com.java.tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
